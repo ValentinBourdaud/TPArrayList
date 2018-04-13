@@ -55,10 +55,22 @@ public class User {
 			}
 
 		});
-
-		for (int i = 0; i < users.size(); i++) {
+		
+		users.remove(users.indexOf(u4));
+		
+		for(int i = 0; i < users.size(); i++) {
 			System.out.println(users.get(i));
 		}
+		
+		
+		
 	}
 
-}
+
+
+
+	
+		
+	}
+
+
