@@ -6,8 +6,8 @@ import java.util.Iterator;
 public class Main {
 
 	public static void main(String[] args) {
-		
-		//Creation du premier arraylist
+
+		// Creation du premier arraylist
 		ArrayList<User> users = new ArrayList();
 
 		User u = new User("Robert", 17, true);
@@ -24,9 +24,8 @@ public class Main {
 		users.add(u5);
 		User u6 = new User("Sylvie", 14, false);
 		users.add(u6);
-		
-		
-		//Creation du second arraylist
+
+		// Creation du second arraylist
 		ArrayList<User> users2 = new ArrayList();
 
 		User us = new User("Timothée", 17, true);
@@ -44,10 +43,10 @@ public class Main {
 		User us6 = new User("Jeanne", 14, false);
 		users2.add(us6);
 
-		//Concatenation des deux arraylists
+		// Concatenation des deux arraylists
 		users2.addAll(users);
 
-		//Tri par ordre alphabétique
+		// Tri par ordre alphabétique
 		Collections.sort(users2, new Comparator<User>() {
 
 			public int compare(User u1, User u2) {
@@ -56,22 +55,17 @@ public class Main {
 			}
 
 		});
-		
-		//Suppression de u4
+
+		// Suppression de u4
 		users.remove(users.indexOf(u4));
 
 		// Affichage de l'ArrayList avec l'Iterator
-		
+
 		Iterator<User> iter = users.iterator();
 		System.out.println(users2);
-		
-		
-	
-	
 
 	}
 
 }
-
 
 

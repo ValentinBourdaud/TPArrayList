@@ -27,9 +27,6 @@ public class User {
 
 		else
 			this.sex = "femme";
-		return "Je m'appelle " + this.name + ", j'ai " + this.age + " ans et je suis une " + this.sex+ "\n";
+		return "Je m'appelle " + this.name + ", j'ai " + this.age + " ans et je suis une " + this.sex + "\n";
 	}
 }
-
-	
-
