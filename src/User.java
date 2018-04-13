@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.Iterator;
 import java.util.List;
 
 public class User {
@@ -26,7 +27,7 @@ public class User {
 
 		else
 			this.sex = "femme";
-		return "Je m'appelle " + this.name + ", j'ai " + this.age + " ans et je suis une " + this.sex;
+		return "Je m'appelle " + this.name + ", j'ai " + this.age + " ans et je suis une " + this.sex+ "\n";
 	}
 
 	public static void main(String[] args) {
@@ -47,6 +48,8 @@ public class User {
 		User u6 = new User("Sylvie", 14, false);
 		users.add(u6);
 
+		// Classement par ordre alphabétique des noms
+
 		Collections.sort(users, new Comparator<User>() {
 
 			public int compare(User u1, User u2) {
@@ -55,22 +58,17 @@ public class User {
 			}
 
 		});
-		
+
+		// Suppression de u4
+
 		users.remove(users.indexOf(u4));
-		
-		for(int i = 0; i < users.size(); i++) {
-			System.out.println(users.get(i));
-		}
-		
-		
-		
+
+		// Affichage de l'ArrayList avec l'Iterator
+
+		Iterator<User> iter = users.iterator();
+		System.out.println(users);
+
 	}
 
-
-
-
-	
-		
-	}
-
+}
 
